@@ -1,60 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kurohane Ports</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kurohane Ports</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- TOP PILLS -->
-<div class="top-nav">
-  <span class="pill">Home</span>
-  <span class="pill">Ports</span>
-  <span class="pill">Screenshots</span>
-  <span class="pill">About</span>
-</div>
+  <!-- DARK MODE TOGGLE -->
+  <button id="themeToggle">🌙</button>
 
-<h1 class="title">Kurohane Ports</h1>
+  <!-- HEADER -->
+  <header>
+    <h1>Kurohane Ports</h1>
 
-<!-- SEARCH -->
-<div class="search-box">
-  <input type="text" placeholder="Search With Android Version">
-</div>
+    <nav class="top-pills">
+      <span>Home</span>
+      <span>Ports</span>
+      <span>Screenshots</span>
+      <span>About</span>
+    </nav>
 
-<!-- CARD 1 -->
-<div class="card">
-  <h2>Redmi Note 8</h2>
-  <p class="subtitle">Codename Ginkgo</p>
+    <input
+      type="text"
+      class="search"
+      placeholder="Search With Android Version"
+    >
+  </header>
 
-  <div class="info">
-    <span>Android 15</span>
-    <span>AOSP Vendor</span>
-  </div>
+  <!-- CARDS -->
+  <main class="cards">
 
-  <div class="btn-group">
-    <button class="btn">Download</button>
-    <button class="btn">Screenshots</button>
-  </div>
-</div>
+    <div class="card">
+      <img src="overview1_phone.png">
 
-<!-- CARD 2 -->
-<div class="card">
-  <h2>Redmi Note 8</h2>
-  <p class="subtitle">Codename Ginkgo</p>
+      <h2>Redmi Note 8</h2>
+      <p class="subtitle">Codename: Ginkgo</p>
 
-  <div class="info">
-    <span>Android 14</span>
-    <span>Mint Vendor</span>
-  </div>
+      <div class="pills">
+        <span>Android 15</span>
+        <span>AOSP Vendor</span>
+      </div>
 
-  <div class="btn-group">
-    <button class="btn">Download</button>
-    <button class="btn">Screenshots</button>
-  </div>
-</div>
+      <div class="buttons">
+        <button class="btn">Download</button>
+        <button class="btn outline">Screenshots</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="overview1_phone.png">
+
+      <h2>Redmi Note 8</h2>
+      <p class="subtitle">Codename: Ginkgo</p>
+
+      <div class="pills">
+        <span>Android 14</span>
+        <span>Mint Vendor</span>
+      </div>
+
+      <div class="buttons">
+        <button class="btn">Download</button>
+        <button class="btn outline">Screenshots</button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- JS -->
+  <script>
+    const toggle = document.getElementById("themeToggle");
+    toggle.onclick = () => {
+      document.body.classList.toggle("dark");
+      toggle.textContent =
+        document.body.classList.contains("dark") ? "☀️" : "🌙";
+    };
+  </script>
 
 </body>
 </html>
-<link rel="stylesheet" href="style.css">
