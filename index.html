@@ -46,6 +46,13 @@ header h1{
 }
 
 /* SEARCH */
+.search-label{
+  display:block;
+  font-size:14px;
+  font-weight:700;
+  margin-bottom:6px;
+  color:#c4001d;
+}
 .search input{
   width:100%;
   padding:15px 18px;
@@ -53,10 +60,10 @@ header h1{
   border:none;
   outline:none;
   font-size:15px;
-  background: rgba(255,220,225,0.6);
-  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.4); /* Transparent */
+  backdrop-filter: blur(6px); /* Halka blur */
   color:#111;
-  box-shadow:0 8px 22px rgba(196,0,29,.18);
+  box-shadow:0 6px 18px rgba(196,0,29,.15);
 }
 
 /* CONTAINER */
@@ -115,8 +122,8 @@ header h1{
 
 /* BUTTONS */
 .btn{
-  width:100%;
-  display:block;
+  width:48%; /* Same width for both */
+  display:inline-block; /* side by side possible */
   text-align:center;
   background: linear-gradient(135deg,#c4001d,#ff4d6d);
   color:#fff;
@@ -127,6 +134,12 @@ header h1{
   text-decoration:none;
   margin-bottom:10px;
   box-shadow:0 10px 25px rgba(196,0,29,.35);
+}
+.btn-container{
+  display:flex;
+  justify-content:space-between; /* Buttons side by side with gap */
+  gap:4%;
+  flex-wrap:wrap;
 }
 </style>
 </head>
@@ -144,6 +157,7 @@ header h1{
 <header>
   <h1>Kurohane Ports</h1>
   <div class="search">
+    <label class="search-label">Android Version</label>
     <input type="text" placeholder="Search device...">
   </div>
 </header>
@@ -162,8 +176,10 @@ header h1{
       <div class="pill">AOSP Vendor</div>
     </div>
 
-    <a href="#" class="btn">Download ROM</a>
-    <a href="#" class="btn">Screenshots</a>
+    <div class="btn-container">
+      <a href="#" class="btn">Download ROM</a>
+      <a href="#" class="btn">Screenshots</a>
+    </div>
   </div>
 
   <!-- CARD 2 -->
@@ -178,11 +194,13 @@ header h1{
       <div class="pill">Mint Vendor</div>
     </div>
 
-    <a href="#" class="btn">Download ROM</a>
-    <a href="#" class="btn">Screenshots</a>
+    <div class="btn-container">
+      <a href="#" class="btn">Download ROM</a>
+      <a href="#" class="btn">Screenshots</a>
+    </div>
   </div>
 
 </div>
 
 </body>
-  </html>
+</html>
