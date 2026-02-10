@@ -15,6 +15,9 @@ body{
   color:#111;
   margin:0;
   padding:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
 /* NAVIGATION PILLS */
@@ -29,7 +32,7 @@ body{
   color:#fff;
   padding:6px 12px;
   border-radius:999px;
-  font-size:12px; /* Chhote pill */
+  font-size:12px;
   font-weight:700;
   text-decoration:none;
   transition:0.3s;
@@ -44,24 +47,55 @@ body{
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  height:70vh;
+  height:75vh;
   text-align:center;
   padding:0 20px;
 }
-.center-text h1{
+
+/* Small text */
+.center-text .small-text{
+  font-size:18px;
+  color:#c4001d;
+  margin-bottom:8px;
+  opacity:0;
+  animation: fadeIn 1s forwards 0.5s;
+}
+
+/* Kurohane Ports Big Text */
+.center-text .big-text{
   font-family: 'Righteous', cursive;
-  font-size:64px; /* bada aur stylish */
+  font-size:64px;
   font-weight:900;
-  line-height:1.1;
   background: linear-gradient(135deg,#c4001d,#ff4d6d);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  margin-bottom:10px;
+  white-space: nowrap;
+  border-right:4px solid #c4001d;
+  overflow: hidden;
+  width:0;
+  animation: typing 3s steps(25) forwards, blink 0.7s step-end infinite alternate;
+  animation-delay: 1s;
 }
+
+/* Subtitle */
 .center-text .subtitle{
-  font-size:20px;
-  font-weight:600;
+  font-size:16px;
   color:#c4001d;
+  margin-top:12px;
+  opacity:0;
+  animation: fadeIn 1s forwards 4s;
+}
+
+/* Typewriter animation */
+@keyframes typing{
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blink{
+  50% { border-color: transparent; }
+}
+@keyframes fadeIn{
+  to { opacity:1; }
 }
 </style>
 </head>
@@ -76,7 +110,8 @@ body{
 
 <!-- CENTER TEXT -->
 <div class="center-text">
-  <h1>Welcome To <br> Kurohane Ports</h1>
+  <div class="small-text">Welcome To</div>
+  <div class="big-text">Kurohane Ports</div>
   <div class="subtitle">We Are Loyal With HyperOS</div>
 </div>
 
