@@ -17,7 +17,7 @@ body{
   padding:0;
   display:flex;
   flex-direction:column;
-  align-items:center;
+  min-height:100vh;
 }
 
 /* NAVIGATION PILLS */
@@ -47,12 +47,12 @@ body{
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  height:75vh;
+  flex-grow:1;
   text-align:center;
   padding:0 20px;
 }
 
-/* Small text */
+/* Small welcome text */
 .center-text .small-text{
   font-size:18px;
   color:#c4001d;
@@ -61,7 +61,7 @@ body{
   animation: fadeIn 1s forwards 0.5s;
 }
 
-/* Kurohane Ports Big Text */
+/* Big text */
 .center-text .big-text{
   font-family: 'Righteous', cursive;
   font-size:64px;
@@ -73,8 +73,20 @@ body{
   border-right:4px solid #c4001d;
   overflow: hidden;
   width:0;
-  animation: typing 3s steps(25) forwards, blink 0.7s step-end infinite alternate;
+  animation: typing 2s steps(12) forwards, blink 0.7s step-end infinite alternate;
   animation-delay: 1s;
+  margin-bottom:0;
+}
+
+/* Ports text below Kurohane */
+.center-text .ports-text{
+  font-family: 'Righteous', cursive;
+  font-size:48px;
+  font-weight:900;
+  background: linear-gradient(135deg,#c4001d,#ff4d6d);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-top:0;
 }
 
 /* Subtitle */
@@ -83,7 +95,7 @@ body{
   color:#c4001d;
   margin-top:12px;
   opacity:0;
-  animation: fadeIn 1s forwards 4s;
+  animation: fadeIn 1s forwards 3s;
 }
 
 /* Typewriter animation */
@@ -96,6 +108,30 @@ body{
 }
 @keyframes fadeIn{
   to { opacity:1; }
+}
+
+/* SOCIAL BUTTONS */
+.social-buttons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:20px 0;
+}
+.social-buttons a{
+  width:50px;
+  height:50px;
+  background: linear-gradient(135deg,#c4001d,#ff4d6d);
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
+  font-size:20px;
+  text-decoration:none;
+  transition:0.3s;
+}
+.social-buttons a:hover{
+  transform: scale(1.1);
 }
 </style>
 </head>
@@ -111,8 +147,16 @@ body{
 <!-- CENTER TEXT -->
 <div class="center-text">
   <div class="small-text">Welcome To</div>
-  <div class="big-text">Kurohane Ports</div>
+  <div class="big-text">Kurohane</div>
+  <div class="ports-text">Ports</div>
   <div class="subtitle">We Are Loyal With HyperOS</div>
+</div>
+
+<!-- SOCIAL BUTTONS -->
+<div class="social-buttons">
+  <a href="https://t.me/" target="_blank">T</a>
+  <a href="https://github.com/" target="_blank">G</a>
+  <a href="https://twitter.com/" target="_blank">Tw</a>
 </div>
 
 </body>
