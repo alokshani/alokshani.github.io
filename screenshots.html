@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Device Screenshots</title>
+<style>
+body{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  background: linear-gradient(135deg,#ffe6ea,#fff1f3,#ffffff);
+  color:#111;
+  padding:20px;
+}
+h1{
+  text-align:center;
+  font-size:36px;
+  font-weight:900;
+  background: linear-gradient(135deg,#c4001d,#ff4d6d);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:30px;
+}
+.container{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap:20px;
+}
+.container img{
+  width:100%;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(196,0,29,.25);
+}
+</style>
+</head>
+<body>
+
+<h1>Device Screenshots</h1>
+
+<div class="container">
+  <img src="images/screenshot1.png" alt="Screenshot 1">
+  <img src="images/screenshot2.png" alt="Screenshot 2">
+  <img src="images/screenshot3.png" alt="Screenshot 3">
+</div>
+
+</body>
+</html>
