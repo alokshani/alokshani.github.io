@@ -6,11 +6,7 @@
 <title>Kurohane Ports</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
@@ -19,22 +15,53 @@ body{
   padding:14px;
 }
 
+/* TOP NAV PILLS */
+.nav{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  margin-top:10px;
+}
+.nav .pill{
+  background: rgba(255,255,255,.6);
+  backdrop-filter: blur(10px);
+  padding:8px 14px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:700;
+  color:#c4001d;
+  box-shadow:0 6px 18px rgba(196,0,29,.15);
+}
+
 /* HEADER */
 header{
   text-align:center;
-  margin:24px 0 32px;
+  margin:22px 0 26px;
 }
 header h1{
-  font-size:36px; /* 🔥 BADA KAR DIYA */
+  font-size:36px;
   font-weight:900;
   background: linear-gradient(135deg,#c4001d,#ff4d6d);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
+  margin-bottom:12px;
 }
-header p{
+
+/* SEARCH */
+.search{
+  width:100%;
+  margin-top:14px;
+}
+.search input{
+  width:100%;
+  padding:14px 18px;
+  border-radius:18px;
+  border:none;
   font-size:15px;
-  opacity:.7;
-  margin-top:8px;
+  outline:none;
+  background:rgba(255,255,255,.75);
+  backdrop-filter:blur(12px);
+  box-shadow:0 8px 22px rgba(0,0,0,.08);
 }
 
 /* CONTAINER */
@@ -42,13 +69,13 @@ header p{
   display:grid;
   grid-template-columns:1fr;
   gap:22px;
+  margin-top:26px;
 }
 
 /* CARD */
 .card{
-  background: rgba(255,255,255,0.65);
+  background: rgba(255,255,255,.65);
   backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
   border-radius:24px;
   padding:16px;
   box-shadow:0 14px 35px rgba(196,0,29,.18);
@@ -60,30 +87,25 @@ header p{
   height:200px;
   object-fit:contain;
   border-radius:18px;
-  margin-bottom:16px;
   background:#fff;
   padding:10px;
+  margin-bottom:16px;
 }
 
-/* TEXT */
+/* TITLE */
 .card h2{
   font-size:22px;
   font-weight:800;
-  margin-bottom:6px;
-}
-.meta{
-  font-size:13px;
-  color:#555;
-  margin-bottom:16px;
+  margin-bottom:12px;
 }
 
-/* BADGES */
-.badges{
+/* PILLS */
+.pills{
   display:flex;
   gap:10px;
   margin-bottom:18px;
 }
-.badge{
+.pill{
   background: linear-gradient(135deg,#ffe5e8,#ffd1d8);
   color:#c4001d;
   padding:7px 14px;
@@ -92,9 +114,8 @@ header p{
   font-weight:700;
 }
 
-/* BUTTON */
+/* BUTTONS */
 .btn{
-  display:block;
   width:100%;
   text-align:center;
   background: linear-gradient(135deg,#c4001d,#ff4d6d);
@@ -104,7 +125,15 @@ header p{
   font-weight:900;
   font-size:16px;
   text-decoration:none;
+  display:block;
   box-shadow:0 10px 25px rgba(196,0,29,.35);
+  margin-bottom:10px;
+}
+
+.btn.secondary{
+  background:rgba(255,255,255,.75);
+  color:#c4001d;
+  box-shadow:none;
 }
 
 /* FOOTER */
@@ -119,9 +148,20 @@ footer{
 
 <body>
 
+<!-- NAV -->
+<div class="nav">
+  <div class="pill">Home</div>
+  <div class="pill">Ports</div>
+  <div class="pill">Screenshots</div>
+  <div class="pill">About</div>
+</div>
+
 <header>
   <h1>Kurohane Ports</h1>
-  <p>Clean • Fast • Premium ROM Builds</p>
+
+  <div class="search">
+    <input type="text" placeholder="Search device...">
+  </div>
 </header>
 
 <div class="container">
@@ -131,14 +171,15 @@ footer{
     <img src="overview1_phone.png" alt="ROM Thumbnail">
 
     <h2>Redmi Note 8</h2>
-    <div class="meta">Android 14 • AOSP Vendor</div>
 
-    <div class="badges">
-      <div class="badge">AOSP Vendor</div>
-      <div class="badge">Buggy</div>
+    <div class="pills">
+      <div class="pill">Codename: Ginkgo</div>
+      <div class="pill">AOSP Vendor</div>
+      <div class="pill">Buggy</div>
     </div>
 
     <a href="#" class="btn">Download ROM</a>
+    <a href="#" class="btn secondary">Screenshots</a>
   </div>
 
   <!-- CARD 2 -->
@@ -146,14 +187,15 @@ footer{
     <img src="overview1_phone.png" alt="ROM Thumbnail">
 
     <h2>Redmi Note 8</h2>
-    <div class="meta">Android 15 • HyperOS Port</div>
 
-    <div class="badges">
-      <div class="badge">Stable</div>
-      <div class="badge">Smooth</div>
+    <div class="pills">
+      <div class="pill">Codename: Ginkgo</div>
+      <div class="pill">Stable</div>
+      <div class="pill">Smooth</div>
     </div>
 
     <a href="#" class="btn">Download ROM</a>
+    <a href="#" class="btn secondary">Screenshots</a>
   </div>
 
 </div>
@@ -163,4 +205,4 @@ footer{
 </footer>
 
 </body>
-</html>
+  </html>
