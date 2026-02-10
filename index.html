@@ -43,31 +43,21 @@ body{
   transform: scale(1.1);
 }
 
-/* CENTER TEXT */
-.center-text{
+/* MAIN CENTER CONTENT */
+.center-content{
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
   flex-grow:1;
   text-align:center;
-  padding:0 20px;
+  padding:20px;
 }
 
-/* Small welcome text */
-.center-text .small-text{
-  font-size:18px;
-  color:#c4001d;
-  margin-bottom:8px;
-  opacity:0;
-  animation: fadeIn 1s forwards 0.5s;
-}
-
-/* Slideshow placeholder */
-.center-text .slideshow{
+/* Slideshow placeholder above Welcome To */
+.slideshow{
   width:300px;
   height:150px;
-  margin:10px 0;
   border-radius:16px;
   background: rgba(196,0,29,0.1);
   display:flex;
@@ -76,10 +66,20 @@ body{
   color:#c4001d;
   font-weight:700;
   font-size:16px;
+  margin-bottom:20px;
+}
+
+/* Small welcome text */
+.small-text{
+  font-size:18px;
+  color:#c4001d;
+  margin-bottom:8px;
+  opacity:0;
+  animation: fadeIn 1s forwards 0.5s;
 }
 
 /* Big text Kurohane with typewriter */
-.center-text .big-text{
+.big-text{
   font-family: 'Righteous', cursive;
   font-size:64px;
   font-weight:900;
@@ -96,7 +96,7 @@ body{
 }
 
 /* Ports text below Kurohane */
-.center-text .ports-text{
+.ports-text{
   font-family: 'Righteous', cursive;
   font-size:48px;
   font-weight:900;
@@ -107,7 +107,7 @@ body{
 }
 
 /* Subtitle */
-.center-text .subtitle{
+.subtitle{
   font-size:16px;
   color:#c4001d;
   margin-top:12px;
@@ -133,7 +133,7 @@ body{
   display:flex;
   justify-content:center;
   gap:20px;
-  padding:15px 0 20px; /* thoda upar shift */
+  margin-bottom:30px; /* Thoda gap bottom se */
 }
 .social-buttons a{
   width:50px;
@@ -162,6 +162,7 @@ body{
 .social-buttons a:hover{
   transform: scale(1.2);
 }
+
 </style>
 </head>
 <body>
@@ -173,16 +174,17 @@ body{
   <a href="#">About</a>
 </div>
 
-<!-- CENTER TEXT -->
-<div class="center-text">
-  <div class="small-text">Welcome To</div>
+<!-- MAIN CENTER CONTENT -->
+<div class="center-content">
   
-  <!-- Slideshow Placeholder -->
+  <!-- Slideshow Placeholder Above Welcome To -->
   <div class="slideshow">Slideshow Here</div>
   
+  <div class="small-text">Welcome To</div>
   <div class="big-text">Kurohane</div>
   <div class="ports-text">Ports</div>
   <div class="subtitle">We Are Loyal With HyperOS</div>
+  
 </div>
 
 <!-- SOCIAL BUTTONS -->
