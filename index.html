@@ -22,29 +22,29 @@ body{
 /* HEADER */
 header{
   text-align:center;
-  margin:20px 0 28px;
+  margin:24px 0 32px;
 }
 header h1{
-  font-size:30px;
+  font-size:36px; /* 🔥 BADA KAR DIYA */
   font-weight:900;
   background: linear-gradient(135deg,#c4001d,#ff4d6d);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 header p{
-  font-size:14px;
+  font-size:15px;
   opacity:.7;
-  margin-top:6px;
+  margin-top:8px;
 }
 
 /* CONTAINER */
 .container{
   display:grid;
   grid-template-columns:1fr;
-  gap:20px;
+  gap:22px;
 }
 
-/* CARD (GLASS) */
+/* CARD */
 .card{
   background: rgba(255,255,255,0.65);
   backdrop-filter: blur(16px);
@@ -54,7 +54,7 @@ header p{
   box-shadow:0 14px 35px rgba(196,0,29,.18);
 }
 
-/* THUMBNAIL */
+/* IMAGE */
 .card img{
   width:100%;
   height:200px;
@@ -112,7 +112,7 @@ footer{
   text-align:center;
   font-size:12px;
   color:#999;
-  margin:34px 0 10px;
+  margin:36px 0 10px;
 }
 </style>
 </head>
@@ -130,12 +130,12 @@ footer{
   <div class="card">
     <img src="overview1_phone.png" alt="ROM Thumbnail">
 
-    <h2>POCO F3 / Mi 11X</h2>
-    <div class="meta">Android 15 • HyperOS Port</div>
+    <h2>Redmi Note 8</h2>
+    <div class="meta">Android 14 • AOSP Vendor</div>
 
     <div class="badges">
-      <div class="badge">Stable</div>
-      <div class="badge">Fastboot</div>
+      <div class="badge">AOSP Vendor</div>
+      <div class="badge">Buggy</div>
     </div>
 
     <a href="#" class="btn">Download ROM</a>
@@ -146,11 +146,11 @@ footer{
     <img src="overview1_phone.png" alt="ROM Thumbnail">
 
     <h2>Redmi Note 8</h2>
-    <div class="meta">Android 14 • Custom Port</div>
+    <div class="meta">Android 15 • HyperOS Port</div>
 
     <div class="badges">
-      <div class="badge">Beta</div>
-      <div class="badge">Recovery</div>
+      <div class="badge">Stable</div>
+      <div class="badge">Smooth</div>
     </div>
 
     <a href="#" class="btn">Download ROM</a>
