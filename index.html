@@ -1,94 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kurohane Ports</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
 body{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
-  background:#0b0b0f;
-  color:#fff;
+  background:#f5f5f7;
+  color:#111;
   padding:14px;
 }
 
+/* HEADER */
 header{
   text-align:center;
-  margin:16px 0 22px;
+  margin:18px 0 26px;
 }
 header h1{
-  font-size:26px;
-  font-weight:700;
+  font-size:28px;
+  font-weight:800;
+  color:#c4001d;
 }
 header p{
-  opacity:.7;
   font-size:14px;
+  opacity:.7;
   margin-top:6px;
 }
 
+/* CONTAINER */
 .container{
   display:grid;
   grid-template-columns:1fr;
-  gap:16px;
+  gap:18px;
 }
 
+/* CARD */
 .card{
-  background:#14141c;
-  border-radius:18px;
+  background:#ffffff;
+  border-radius:20px;
   padding:16px;
-  box-shadow:0 12px 30px rgba(0,0,0,.45);
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
+/* SAME IMAGE */
 .card img{
   width:100%;
-  height:180px;
+  height:190px;
   object-fit:cover;
-  border-radius:14px;
+  border-radius:16px;
   margin-bottom:14px;
 }
 
+/* TEXT */
 .card h2{
-  font-size:20px;
+  font-size:21px;
+  font-weight:700;
   margin-bottom:6px;
 }
-.card .meta{
+.meta{
   font-size:13px;
-  opacity:.7;
-  margin-bottom:12px;
+  color:#666;
+  margin-bottom:14px;
 }
 
+/* BADGES */
 .badges{
   display:flex;
   gap:8px;
-  margin-bottom:14px;
+  margin-bottom:16px;
 }
 .badge{
-  background:#1f1f2b;
-  padding:6px 10px;
+  background:#ffe5e8;
+  color:#c4001d;
+  padding:6px 12px;
   border-radius:999px;
   font-size:12px;
+  font-weight:600;
 }
 
+/* BUTTON */
 .btn{
   display:block;
   width:100%;
   text-align:center;
-  background:linear-gradient(135deg,#5b7cff,#8fa2ff);
-  color:#000;
-  padding:14px;
-  border-radius:14px;
-  font-weight:700;
-  text-decoration:none;
+  background:#c4001d;
+  color:#fff;
+  padding:15px;
+  border-radius:16px;
+  font-weight:800;
   font-size:16px;
+  text-decoration:none;
 }
 
+/* FOOTER */
 footer{
   text-align:center;
-  opacity:.4;
   font-size:12px;
-  margin:30px 0 10px;
+  color:#999;
+  margin:32px 0 10px;
 }
 </style>
 </head>
@@ -97,15 +114,16 @@ footer{
 
 <header>
   <h1>Kurohane Ports</h1>
-  <p>Premium Custom ROM Downloads</p>
+  <p>Clean • Fast • Custom ROM Builds</p>
 </header>
 
 <div class="container">
 
   <!-- CARD 1 -->
   <div class="card">
-    <img src="https://i.imgur.com/2yaf2wb.png" alt="POCO F3">
-    <h2>POCO F3 / Mi 11X</h2>
+    <img src="https://www.google.com/search?client=ms-unknown&hs=Q5eU&sca_esv=545bdda786e188f2&sxsrf=ANbL-n51s6kMSzYDzu6KYJqrAYcDbEtWDg:1770758675392&udm=2&fbs=ADc_l-ZMtfrlQ0SU6L2D0-D344flsprUi5NYvvJVflrdjdmmndzc87yxCU-u2_IZZ9ETkTNc53LM9kUK8NMcBBq480Aj-5n3QioyEBbKlQKw9QFUFQJobEDYusvoGfeMDpFWwLSOR7bQ12ygvorpIiSeRS6_L7rMI93bXjW5n3rE5AcSkTBBylsB2pOlPWYmnmzsRYFNCxeM_Mpfgi8t0xlSHbYqqujrNdibAg7jD4V5dtEfJxqvyDg&q=redmi+note+8+model+images&sa=X&ved=2ahUKEwjbpNGO7s-SAxVQ4zgGHeYzJ8sQtKgLegQIFBAB&biw=393&bih=748&dpr=2.75#sv=CAMSkwUa8wQKnQIKuQEStgEKd0FNbjMteVRWTzd1SmFCSUg4TnNELVcyMFZTNnBsa3VLenhFZDY5Ul9IYnF2dWJjMmZPQ1l2VDJfVnVFdjl3V2Y4YS1xa0g5TUJJRHRkRU1scEE2T2xtcGs3bVhDZEVTWjcyTk9nYjZZa0JGd19XazA0MDFkYnpvEhdLS0tMYWNqQ09KQ000LUVQNkxYSTJRWRoiQUpLTEZtS2JOc2NLd2poUHJrM05EODRIbDJ4d2hMU3pMQRIDODQ5GgEzIh4KAXESGXJlZG1pIG5vdGUgOCBtb2RlbCBpbWFnZXMiBwoDdGJzEgAiLgoEZXFsZBImQ2dJSUFCQUFLQUU2QkFnQkVBRklBVldjV25vX1lBRnRELXNtUHcSvgIKzwESzAEKjAFBTW4zLXlSakd0Q0p2QWJlTGd2ME1OTG5vUEtkRnNRalE4S1BQMGhueDktNE9aNzV1b2h0eTBMdGc1aEstS0pkQWRVaVM0Zkd4RDhRXzk2QXB6cFhUMnNJdmxQNGlEWVFXTW1kUGxOUjRfV3E1NTNPRDR1VDlJS1hBcDdUTXlSOEF5VjZSNDVXd2pQdhIXS0tLTGFjakNPSkNNNC1FUDZMWEkyUVkaIkFKS0xGbUp4X0xFcUFfR0Rrc1JhT2FnUTUxVXRnT00xa0ESBDQ2OTgaATMiGAoGaW1nZGlpEg5aR2NiQ0F0RC1UMk1FTSIXCgVkb2NpZBIObjJGb3BYeFFwSkF1Qk0iLgoEZXFsZBImQ2dJSUFCQUFLQUU2QkFnQkVBRklBVldjV25vX1lBRnRELXNtUHcqEGUtWkdjYkNBdEQtVDJNRU0gBCoXCgFzEhBlLVpHY2JDQXRELVQyTUVNGAEwARgHILjOx-4FMAFKCBACGAIgAigC" alt="ROM Thumbnail">
+
+    <h2> Redmi Note 8 </h2>
     <div class="meta">Android 15 • HyperOS Port</div>
 
     <div class="badges">
@@ -113,12 +131,13 @@ footer{
       <div class="badge">Fastboot</div>
     </div>
 
-    <a class="btn" href="#">Download ROM</a>
+    <a href="#" class="btn">Download ROM</a>
   </div>
 
   <!-- CARD 2 -->
   <div class="card">
-    <img src="https://i.imgur.com/6xP8FzM.png" alt="Redmi Note 8">
+    <img src="https://www.google.com/search?client=ms-unknown&hs=Q5eU&sca_esv=545bdda786e188f2&sxsrf=ANbL-n51s6kMSzYDzu6KYJqrAYcDbEtWDg:1770758675392&udm=2&fbs=ADc_l-ZMtfrlQ0SU6L2D0-D344flsprUi5NYvvJVflrdjdmmndzc87yxCU-u2_IZZ9ETkTNc53LM9kUK8NMcBBq480Aj-5n3QioyEBbKlQKw9QFUFQJobEDYusvoGfeMDpFWwLSOR7bQ12ygvorpIiSeRS6_L7rMI93bXjW5n3rE5AcSkTBBylsB2pOlPWYmnmzsRYFNCxeM_Mpfgi8t0xlSHbYqqujrNdibAg7jD4V5dtEfJxqvyDg&q=redmi+note+8+model+images&sa=X&ved=2ahUKEwjbpNGO7s-SAxVQ4zgGHeYzJ8sQtKgLegQIFBAB&biw=393&bih=748&dpr=2.75#sv=CAMSkwUa8wQKnQIKuQEStgEKd0FNbjMteVRWTzd1SmFCSUg4TnNELVcyMFZTNnBsa3VLenhFZDY5Ul9IYnF2dWJjMmZPQ1l2VDJfVnVFdjl3V2Y4YS1xa0g5TUJJRHRkRU1scEE2T2xtcGs3bVhDZEVTWjcyTk9nYjZZa0JGd19XazA0MDFkYnpvEhdLS0tMYWNqQ09KQ000LUVQNkxYSTJRWRoiQUpLTEZtS2JOc2NLd2poUHJrM05EODRIbDJ4d2hMU3pMQRIDODQ5GgEzIh4KAXESGXJlZG1pIG5vdGUgOCBtb2RlbCBpbWFnZXMiBwoDdGJzEgAiLgoEZXFsZBImQ2dJSUFCQUFLQUU2QkFnQkVBRklBVldjV25vX1lBRnRELXNtUHcSvgIKzwESzAEKjAFBTW4zLXlSakd0Q0p2QWJlTGd2ME1OTG5vUEtkRnNRalE4S1BQMGhueDktNE9aNzV1b2h0eTBMdGc1aEstS0pkQWRVaVM0Zkd4RDhRXzk2QXB6cFhUMnNJdmxQNGlEWVFXTW1kUGxOUjRfV3E1NTNPRDR1VDlJS1hBcDdUTXlSOEF5VjZSNDVXd2pQdhIXS0tLTGFjakNPSkNNNC1FUDZMWEkyUVkaIkFKS0xGbUp4X0xFcUFfR0Rrc1JhT2FnUTUxVXRnT00xa0ESBDQ2OTgaATMiGAoGaW1nZGlpEg5aR2NiQ0F0RC1UMk1FTSIXCgVkb2NpZBIObjJGb3BYeFFwSkF1Qk0iLgoEZXFsZBImQ2dJSUFCQUFLQUU2QkFnQkVBRklBVldjV25vX1lBRnRELXNtUHcqEGUtWkdjYkNBdEQtVDJNRU0gBCoXCgFzEhBlLVpHY2JDQXRELVQyTUVNGAEwARgHILjOx-4FMAFKCBACGAIgAigC" alt="ROM Thumbnail">
+
     <h2>Redmi Note 8</h2>
     <div class="meta">Android 14 • Custom Port</div>
 
@@ -127,7 +146,7 @@ footer{
       <div class="badge">Recovery</div>
     </div>
 
-    <a class="btn" href="#">Download ROM</a>
+    <a href="#" class="btn">Download ROM</a>
   </div>
 
 </div>
