@@ -4,184 +4,55 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kurohane Ports</title>
-
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-
-body{
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
-  background: linear-gradient(135deg,#ffe6ea,#fff1f3,#ffffff);
-  color:#111;
-  padding:14px;
-}
-
-/* NAV */
-.nav{
-  display:flex;
-  gap:10px;
-  justify-content:center;
-  margin-top:10px;
-}
-.nav .pill{
-  background: linear-gradient(135deg,#c4001d,#ff4d6d);
-  color:#fff;
-  padding:8px 14px;
-  border-radius:999px;
-  font-size:13px;
-  font-weight:700;
-}
-
-/* HEADER */
-header{
-  text-align:center;
-  margin:22px 0 26px;
-}
-header h1{
-  font-size:36px;
-  font-weight:900;
-  background: linear-gradient(135deg,#c4001d,#ff4d6d);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  margin-bottom:14px;
-}
-
-/* SEARCH */
-.search input{
-  width:100%;
-  padding:15px 18px;
-  border-radius:18px;
-  border:none;
-  outline:none;
-  font-size:15px;
-  background: rgba(255,220,225,0.6);
-  backdrop-filter: blur(12px);
-  color:#111;
-  box-shadow:0 8px 22px rgba(196,0,29,.18);
-}
-
-/* CONTAINER */
-.container{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:22px;
-  margin-top:26px;
-}
-
-/* CARD */
-.card{
-  background: rgba(255,255,255,.65);
-  backdrop-filter: blur(16px);
-  border-radius:24px;
-  padding:16px;
-  box-shadow:0 14px 35px rgba(196,0,29,.18);
-}
-
-/* IMAGE */
-.card img{
-  width:100%;
-  height:200px;
-  object-fit:contain;
-  border-radius:18px;
-  background:#fff;
-  padding:10px;
-  margin-bottom:16px;
-}
-
-/* TEXT */
-.card h2{
-  font-size:22px;
-  font-weight:800;
-}
-.subtitle{
-  font-size:13px;
-  color:#666;
-  margin:6px 0 14px;
-}
-
-/* PILLS */
-.pills{
-  display:flex;
-  gap:10px;
-  margin-bottom:18px;
-}
-.pill{
-  background: linear-gradient(135deg,#c4001d,#ff4d6d);
-  color:#fff;
-  padding:8px 14px;
-  border-radius:999px;
-  font-size:12px;
-  font-weight:800;
-}
-
-/* BUTTONS */
-.btn{
-  width:100%;
-  display:block;
-  text-align:center;
-  background: linear-gradient(135deg,#c4001d,#ff4d6d);
-  color:#fff;
-  padding:16px;
-  border-radius:18px;
-  font-weight:900;
-  font-size:16px;
-  text-decoration:none;
-  margin-bottom:10px;
-  box-shadow:0 10px 25px rgba(196,0,29,.35);
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- TOP NAV -->
-<div class="nav">
-  <div class="pill">Home</div>
-  <div class="pill">Ports</div>
-  <div class="pill">Screenshots</div>
-  <div class="pill">About</div>
+<!-- TOP PILLS -->
+<div class="top-nav">
+  <span class="pill">Home</span>
+  <span class="pill">Ports</span>
+  <span class="pill">Screenshots</span>
+  <span class="pill">About</span>
 </div>
 
-<header>
-  <h1>Kurohane Ports</h1>
-  <div class="search">
-    <input type="text" placeholder="Search device...">
-  </div>
-</header>
+<h1 class="title">Kurohane Ports</h1>
 
-<div class="container">
+<!-- SEARCH -->
+<div class="search-box">
+  <input type="text" placeholder="Search With Android Version">
+</div>
 
-  <!-- CARD 1 -->
-  <div class="card">
-    <img src="overview1_phone.png">
+<!-- CARD 1 -->
+<div class="card">
+  <h2>Redmi Note 8</h2>
+  <p class="subtitle">Codename Ginkgo</p>
 
-    <h2>Redmi Note 8</h2>
-    <div class="subtitle">Codename: Ginkgo</div>
-
-    <div class="pills">
-      <div class="pill">Android 15</div>
-      <div class="pill">AOSP Vendor</div>
-    </div>
-
-    <a href="#" class="btn">Download ROM</a>
-    <a href="#" class="btn">Screenshots</a>
+  <div class="info">
+    <span>Android 15</span>
+    <span>AOSP Vendor</span>
   </div>
 
-  <!-- CARD 2 -->
-  <div class="card">
-    <img src="overview1_phone.png">
+  <div class="btn-group">
+    <button class="btn">Download</button>
+    <button class="btn">Screenshots</button>
+  </div>
+</div>
 
-    <h2>Redmi Note 8</h2>
-    <div class="subtitle">Codename: Ginkgo</div>
+<!-- CARD 2 -->
+<div class="card">
+  <h2>Redmi Note 8</h2>
+  <p class="subtitle">Codename Ginkgo</p>
 
-    <div class="pills">
-      <div class="pill">Android 14</div>
-      <div class="pill">Mint Vendor</div>
-    </div>
-
-    <a href="#" class="btn">Download ROM</a>
-    <a href="#" class="btn">Screenshots</a>
+  <div class="info">
+    <span>Android 14</span>
+    <span>Mint Vendor</span>
   </div>
 
+  <div class="btn-group">
+    <button class="btn">Download</button>
+    <button class="btn">Screenshots</button>
+  </div>
 </div>
 
 </body>
