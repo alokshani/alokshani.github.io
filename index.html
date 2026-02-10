@@ -7,6 +7,8 @@
 
 <!-- Roxy Font -->
 <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 body{
@@ -61,7 +63,7 @@ body{
   animation: fadeIn 1s forwards 0.5s;
 }
 
-/* Big text */
+/* Big text Kurohane with typewriter */
 .center-text .big-text{
   font-family: 'Righteous', cursive;
   font-size:64px;
@@ -73,7 +75,7 @@ body{
   border-right:4px solid #c4001d;
   overflow: hidden;
   width:0;
-  animation: typing 2s steps(12) forwards, blink 0.7s step-end infinite alternate;
+  animation: typing 2s steps(12) forwards, blink 0.7s step-end 4 alternate;
   animation-delay: 1s;
   margin-bottom:0;
 }
@@ -104,7 +106,8 @@ body{
   to { width: 100%; }
 }
 @keyframes blink{
-  50% { border-color: transparent; }
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #c4001d; }
 }
 @keyframes fadeIn{
   to { opacity:1; }
@@ -115,7 +118,7 @@ body{
   display:flex;
   justify-content:center;
   gap:20px;
-  padding:20px 0;
+  padding:15px 0 40px; /* thoda upar kar diya, neeche space bhi diya */
 }
 .social-buttons a{
   width:50px;
@@ -131,7 +134,7 @@ body{
   transition:0.3s;
 }
 .social-buttons a:hover{
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 </style>
 </head>
@@ -154,9 +157,9 @@ body{
 
 <!-- SOCIAL BUTTONS -->
 <div class="social-buttons">
-  <a href="https://t.me/" target="_blank">T</a>
-  <a href="https://github.com/" target="_blank">G</a>
-  <a href="https://twitter.com/" target="_blank">Tw</a>
+  <a href="https://t.me/" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+  <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+  <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
 </div>
 
 </body>
