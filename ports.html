@@ -13,6 +13,7 @@ body{
   padding:14px;
   overflow-x:hidden;
 }
+/* NAV */
 .nav{
   display:flex;
   gap:10px;
@@ -30,14 +31,17 @@ body{
   transition:0.3s;
 }
 .nav .pill:hover{transform:scale(1.05);}
+
+/* CONTAINER */
 .container{
   display:grid;
   grid-template-columns:1fr;
   gap:22px;
   margin-top:26px;
 }
+/* CARD */
 .card{
-  background: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.25);
   backdrop-filter: blur(15px);
   border-radius:24px;
   padding:16px;
@@ -58,17 +62,12 @@ body{
   margin-bottom:16px;
   box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
 }
-.card h2{
-  font-size:20px;
-  font-weight:800;
-  margin-bottom:12px;
-  margin-top:8px;
-}
+/* PILLS */
 .pills{
   display:flex;
   gap:8px;
-  margin-bottom:12px;
   flex-wrap:wrap;
+  margin-bottom:8px;
 }
 .pill{
   padding:6px 12px;
@@ -77,12 +76,19 @@ body{
   font-weight:700;
   color:#fff;
   background: linear-gradient(135deg,#007BFF,#33A1FF);
-  display:inline-block;
 }
 .yellow-pill{
   background: linear-gradient(135deg,#FFD700,#FFC107);
   color:#111;
 }
+/* TITLE */
+.card h2{
+  font-size:20px;
+  font-weight:800;
+  margin-bottom:12px;
+  margin-top:4px;
+}
+/* BUTTONS */
 .btn-container{
   display:flex;
   justify-content:space-between;
@@ -118,17 +124,18 @@ body{
 </div>
 
 <div class="container">
+
   <!-- CARD 1 -->
   <div class="card">
     <img src="thumbnail1.png" alt="HyperOS ROM Thumbnail">
-    <!-- UPPER PILLS -->
+    <!-- Upper Pills -->
     <div class="pills">
       <div class="pill">Codename: Ginkgo</div>
       <div class="pill yellow-pill">By Mr Kurohane</div>
     </div>
-    <!-- TITLE BELOW PILLS -->
+    <!-- Title Below Upper Pills -->
     <h2>| HyperOS 2.0.204.0 VOUMIXM |</h2>
-    <!-- LOWER PILLS -->
+    <!-- Lower Pills -->
     <div class="pills">
       <div class="pill">Android 15</div>
       <div class="pill">AOSP Vendor</div>
@@ -142,14 +149,14 @@ body{
   <!-- CARD 2 -->
   <div class="card">
     <img src="thumbnail1.png" alt="HyperOS ROM Thumbnail">
-    <!-- UPPER PILLS -->
+    <!-- Upper Pills -->
     <div class="pills">
       <div class="pill">Codename: Ginkgo</div>
       <div class="pill yellow-pill">By Mr Kurohane</div>
     </div>
-    <!-- TITLE BELOW PILLS -->
+    <!-- Title Below Upper Pills -->
     <h2>| HyperOS 2.0.3.0 UMSCNXM |</h2>
-    <!-- LOWER PILLS -->
+    <!-- Lower Pills -->
     <div class="pills">
       <div class="pill">Android 14</div>
       <div class="pill">Mint Vendor</div>
@@ -159,7 +166,7 @@ body{
       <a href="screenshots.html" class="btn">Screenshots</a>
     </div>
   </div>
-</div>
 
+</div>
 </body>
-  </html>
+</html>
