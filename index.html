@@ -11,15 +11,18 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
+/* LOCK SCROLLING */
 body{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
   background: linear-gradient(135deg,#ffe6ea,#fff1f3,#ffffff);
-  color:#111;
   margin:0;
   padding:0;
+  overflow:hidden; /* Scrolling lock */
   display:flex;
   flex-direction:column;
-  min-height:100vh;
+  height:100vh;
+  width:100vw;
+  color:#111;
 }
 
 /* NAVIGATION PILLS */
@@ -28,6 +31,8 @@ body{
   gap:8px;
   justify-content:center;
   padding:16px 0;
+  z-index:2;
+  position:relative;
 }
 .nav a{
   background: linear-gradient(135deg,#c4001d,#ff4d6d);
@@ -43,30 +48,37 @@ body{
   transform: scale(1.1);
 }
 
-/* MAIN CENTER CONTENT */
+/* SLIDESHOW BACKGROUND */
+.slideshow-container{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+  overflow:hidden;
+  filter:blur(25px); /* Heavy blur */
+}
+.slideshow-container img{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  transition:opacity 1.5s ease-in-out;
+}
+
+/* CENTER CONTENT */
 .center-content{
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  flex-grow:1;
   text-align:center;
+  z-index:1;
+  position:relative;
+  flex-grow:1;
   padding:20px;
-}
-
-/* Slideshow placeholder above Welcome To */
-.slideshow{
-  width:300px;
-  height:150px;
-  border-radius:16px;
-  background: rgba(196,0,29,0.1);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  color:#c4001d;
-  font-weight:700;
-  font-size:16px;
-  margin-bottom:20px;
 }
 
 /* Small welcome text */
@@ -133,7 +145,7 @@ body{
   display:flex;
   justify-content:center;
   gap:20px;
-  margin-bottom:30px; /* Thoda gap bottom se */
+  margin-top:20px;
 }
 .social-buttons a{
   width:50px;
@@ -147,8 +159,6 @@ body{
   text-decoration:none;
   transition:0.3s;
 }
-
-/* Individual Button Colors */
 .social-buttons a.telegram{
   background: linear-gradient(135deg, #2ebcff, #0d8ddb);
 }
@@ -158,7 +168,6 @@ body{
 .social-buttons a.twitter{
   background:#1da1f2;
 }
-
 .social-buttons a:hover{
   transform: scale(1.2);
 }
@@ -174,25 +183,41 @@ body{
   <a href="#">About</a>
 </div>
 
-<!-- MAIN CENTER CONTENT -->
+<!-- SLIDESHOW BACKGROUND -->
+<div class="slideshow-container">
+  <img src="photo1.png" class="slide" style="opacity:1;">
+  <img src="photo2.png" class="slide">
+  <img src="photo3.png" class="slide">
+  <img src="photo4.png" class="slide">
+  <img src="photo5.png" class="slide">
+  <img src="photo6.png" class="slide">
+</div>
+
+<!-- CENTER CONTENT -->
 <div class="center-content">
-  
-  <!-- Slideshow Placeholder Above Welcome To -->
-  <div class="slideshow">Slideshow Here</div>
-  
   <div class="small-text">Welcome To</div>
   <div class="big-text">Kurohane</div>
   <div class="ports-text">Ports</div>
   <div class="subtitle">We Are Loyal With HyperOS</div>
   
+  <!-- SOCIAL BUTTONS -->
+  <div class="social-buttons">
+    <a href="https://t.me/" target="_blank" class="telegram"><i class="fab fa-telegram-plane"></i></a>
+    <a href="https://github.com/" target="_blank" class="github"><i class="fab fa-github"></i></a>
+    <a href="https://twitter.com/" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+  </div>
 </div>
 
-<!-- SOCIAL BUTTONS -->
-<div class="social-buttons">
-  <a href="https://t.me/" target="_blank" class="telegram"><i class="fab fa-telegram-plane"></i></a>
-  <a href="https://github.com/" target="_blank" class="github"><i class="fab fa-github"></i></a>
-  <a href="https://twitter.com/" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
-</div>
+<script>
+// SIMPLE SLIDESHOW
+let slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+setInterval(() => {
+  slides[currentSlide].style.opacity = 0;
+  currentSlide = (currentSlide+1)%slides.length;
+  slides[currentSlide].style.opacity = 1;
+}, 3000); // change every 3s
+</script>
 
 </body>
-    </html>
+</html>
