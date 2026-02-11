@@ -185,5 +185,32 @@ function setActivePill() {
 
 window.addEventListener('load', setActivePill);
 </script>
+<script>
+const navPills = document.querySelectorAll('.nav .pill');
+const indicator = document.querySelector('.nav .indicator');
+
+function moveIndicator() {
+  const path = window.location.pathname.split("/").pop();
+  let activePill = navPills[0]; // default Home
+  navPills.forEach(pill => {
+    if(pill.getAttribute('href') === path || (path === '' && pill.getAttribute('href') === 'index.html')){
+      activePill = pill;
+    }
+  });
+
+  // Set active class
+  navPills.forEach(p => p.classList.remove('active'));
+  activePill.classList.add('active');
+
+  // Move indicator
+  const pillRect = activePill.getBoundingClientRect();
+  const navRect = activePill.parentElement.getBoundingClientRect();
+  indicator.style.width = pillRect.width + 'px';
+  indicator.style.left = (pillRect.left - navRect.left) + 'px';
+}
+
+window.addEventListener('load', moveIndicator);
+window.addEventListener('resize', moveIndicator);
+</script>
 </body>
 </html>
