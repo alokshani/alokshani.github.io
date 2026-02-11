@@ -104,28 +104,28 @@ header h1{
 }
 
 /* PILLS */
-.pills{
+.btn-pill-container{
   display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-bottom:18px;
   justify-content:center;
-}
-.pill{
-  background: linear-gradient(135deg,#c4001d,#ff4d6d);
-  color:#fff;
-  padding:8px 14px;
-  border-radius:999px;
-  font-size:12px;
-  font-weight:800;
+  gap:2px; /* minimal gap */
+  margin-bottom:12px;
 }
 .blue-pill{
   background: linear-gradient(135deg,#6ac8ff,#33a1ff);
   color:#fff;
-  padding:8px 14px;
+  padding:6px 10px;
   border-radius:999px;
-  font-size:12px;
-  font-weight:800;
+  font-size:11px;
+  font-weight:700;
+  text-align:center;
+}
+.yellow-pill{
+  background: linear-gradient(135deg,#FFD700,#FFC300);
+  color:#111;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:700;
   text-align:center;
 }
 
@@ -133,6 +133,7 @@ header h1{
 .btn-container{
   display:flex;
   gap:10px;
+  margin-top:6px;
 }
 .btn{
   flex:1;
@@ -149,12 +150,6 @@ header h1{
 }
 .btn:hover{
   transform: scale(1.05);
-}
-.btn-pill-container{
-  display:flex;
-  gap:10px;
-  justify-content:space-between;
-  margin-bottom:6px;
 }
 </style>
 </head>
@@ -186,7 +181,7 @@ header h1{
     
     <div class="btn-pill-container">
       <div class="blue-pill">Codename: Ginkgo</div>
-      <div class="blue-pill">By Mr Kurohane</div>
+      <div class="yellow-pill">By Mr Kurohane</div>
     </div>
     
     <div class="btn-container">
@@ -204,7 +199,7 @@ header h1{
     
     <div class="btn-pill-container">
       <div class="blue-pill">Codename: Ginkgo</div>
-      <div class="blue-pill">By Mr Kurohane</div>
+      <div class="yellow-pill">By Mr Kurohane</div>
     </div>
     
     <div class="btn-container">
@@ -216,4 +211,4 @@ header h1{
 </div>
 
 </body>
-        </html>
+</html>
