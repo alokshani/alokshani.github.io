@@ -13,9 +13,6 @@ body{
   color:#fff;
   padding:20px;
   overflow-x:hidden;
-  display:flex;
-  flex-direction:column;
-  min-height:100vh;
 }
 
 /* NAVIGATION */
@@ -78,18 +75,20 @@ header h1{
   flex-direction:column;
   align-items:flex-start;
   justify-content:flex-start;
-  flex:1;
   margin-top:40px;
+  padding-bottom:80px; /* space for fixed buttons */
 }
 
-/* SOCIAL BUTTONS */
+/* SOCIAL BUTTONS FIXED */
 .button-container{
+  position:fixed;
+  bottom:20px; /* thoda upar */
+  left:50%;
+  transform:translateX(-50%);
   display:flex;
   gap:14px;
-  margin-top:auto; /* push buttons to bottom */
   justify-content:center;
-  width:100%;
-  padding-bottom:30px;
+  z-index:999;
 }
 .btn{
   padding:12px 20px;
@@ -125,21 +124,21 @@ header h1{
 <div class="center-container">
   <h3>WELCOME TO</h3>
   <h1>Kurohane Ports</h1>
-  
-  <div class="button-container">
-    <a href="https://t.me/kurohane" target="_blank" class="btn telegram">
-      <img src="images/telegram.png" alt="Telegram">
-      Telegram
-    </a>
-    <a href="https://github.com/kurohane" target="_blank" class="btn github">
-      <img src="images/github.png" alt="GitHub">
-      GitHub
-    </a>
-    <a href="https://twitter.com/kurohane" target="_blank" class="btn twitter">
-      <img src="images/twitter.png" alt="Twitter">
-      Twitter
-    </a>
-  </div>
+</div>
+
+<div class="button-container">
+  <a href="https://t.me/kurohane" target="_blank" class="btn telegram">
+    <img src="images/telegram.png" alt="Telegram">
+    Telegram
+  </a>
+  <a href="https://github.com/kurohane" target="_blank" class="btn github">
+    <img src="images/github.png" alt="GitHub">
+    GitHub
+  </a>
+  <a href="https://twitter.com/kurohane" target="_blank" class="btn twitter">
+    <img src="images/twitter.png" alt="Twitter">
+    Twitter
+  </a>
 </div>
 
 </body>
