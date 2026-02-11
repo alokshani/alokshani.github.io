@@ -9,23 +9,22 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
-  background: linear-gradient(to bottom, #001f4d 0%, #3399ff 50%, #ffffff 100%);
-  color:#fff;
+  background: linear-gradient(to bottom, #99ccff 0%, #cce6ff 50%, #ffffff 100%);
+  color:#004080; /* dark blue text for contrast */
   padding:20px;
   overflow-x:hidden;
   min-height:100vh;
-  transition:background 0.5s;
 }
 
 /* NAVIGATION */
 .nav{
   display:flex;
   gap:10px;
-  justify-content:flex-start;
+  justify-content:center;
   margin-top:10px;
 }
 .nav .pill{
-  background: linear-gradient(135deg,#8a2be2,#c266ff);
+  background: linear-gradient(135deg,#3399ff,#66ccff);
   color:#fff;
   padding:8px 14px;
   border-radius:999px;
@@ -36,72 +35,73 @@ body{
 }
 .nav .pill:hover{transform:scale(1.05);}
 
-/* HEADER */
-header{
-  margin-top:30px;
+/* CENTER CONTAINER */
+.center-container{
+  display:flex;
+  flex-direction:column;
+  align-items:center; /* center horizontally */
+  justify-content:center;
+  min-height:70vh;
+  text-align:center;
 }
-header h1{
-  font-size:48px;
-  font-weight:900;
-  background: linear-gradient(135deg,#8a2be2,#c266ff);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+
+/* Welcome To */
+.center-container h3{
+  font-size:14px;
+  font-weight:700;
+  text-transform:uppercase;
   margin-bottom:6px;
-  text-align:left;
+  color:#3399ff;
 }
-.typewriter{
+
+/* Kurohane Ports */
+.center-container h1{
+  font-family:'Roxy', sans-serif;
+  font-size:32px;
+  font-weight:900;
+  background:#ffffff; /* only behind text */
+  color:#004080;
+  border-radius:6px;
+  padding:4px 12px;
   display:inline-block;
-  border-right: 2px solid #fff;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 2s steps(12), blink 0.6s step-end infinite;
-}
-@keyframes typing {
-  from{width:0}
-  to{width:100%}
-}
-@keyframes blink{
-  50%{border-color:transparent}
-  100%{border-color:#fff}
+  text-transform:uppercase;
+  margin-bottom:12px;
 }
 
 /* SUBTITLE */
 .subtitle{
-  font-size:18px;
-  color:#c266ff;
-  margin-bottom:22px;
-  text-align:left;
+  font-size:16px;
+  color:#3399ff;
+  margin-bottom:20px;
 }
 
 /* SOCIAL BUTTONS */
 .button-container{
   display:flex;
-  gap:14px;
+  gap:12px;
   margin-top:20px;
-  justify-content:flex-start;
+  justify-content:center;
 }
 .btn{
-  padding:14px 22px;
-  border-radius:12px; /* Rounded square */
-  background: linear-gradient(135deg,#8a2be2,#c266ff);
+  padding:12px 18px;
+  border-radius:12px;
+  background: linear-gradient(135deg,#3399ff,#66ccff);
   color:#fff;
   font-weight:700;
-  font-size:16px;
+  font-size:14px;
   text-decoration:none;
+  display:flex;
+  align-items:center;
+  gap:6px;
   transition:0.3s;
 }
 .btn:hover{
   transform:scale(1.05);
-  box-shadow:0 8px 20px rgba(138,43,226,0.4);
+  box-shadow:0 6px 18px rgba(51,153,255,0.4);
 }
-
-/* CENTER CONTAINER */
-.center-container{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  justify-content:center;
-  min-height:60vh;
+.btn img{
+  width:18px;
+  height:18px;
 }
 </style>
 </head>
@@ -115,13 +115,19 @@ header h1{
 </div>
 
 <div class="center-container">
-  <h1><span class="typewriter">Welcome to</span></h1>
-  <h1><span class="typewriter" style="animation-delay:2.2s">Kurohane Ports</span></h1>
+  <h3>Welcome To</h3>
+  <h1>Kurohane Ports</h1>
   <div class="subtitle">We Are Loyal With HyperOS</div>
   <div class="button-container">
-    <a href="https://t.me/kurohane" target="_blank" class="btn">Telegram</a>
-    <a href="https://github.com/kurohane" target="_blank" class="btn">GitHub</a>
-    <a href="https://twitter.com/kurohane" target="_blank" class="btn">Twitter</a>
+    <a href="https://t.me/kurohane" target="_blank" class="btn">
+      <img src="images/telegram.png" alt="Telegram">Telegram
+    </a>
+    <a href="https://github.com/kurohane" target="_blank" class="btn">
+      <img src="images/github.png" alt="GitHub">GitHub
+    </a>
+    <a href="https://twitter.com/kurohane" target="_blank" class="btn">
+      <img src="images/twitter.png" alt="Twitter">Twitter
+    </a>
   </div>
 </div>
 
