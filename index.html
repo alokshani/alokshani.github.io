@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kurohane Ports</title>
-<!-- Roxy Font CDN -->
 <link href="https://fonts.cdnfonts.com/css/roxy" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -58,7 +57,21 @@ header h1{
   display:inline-block;
   text-align:left;
   text-transform:uppercase;
-  margin-bottom:6px;
+  overflow:hidden;
+  white-space:nowrap;
+  border-right: 2px solid #000;
+  animation: typewriter 2s steps(16) forwards, blink 0.7s step-end infinite;
+  width:0;
+}
+
+/* Typewriter animation */
+@keyframes typewriter{
+  from{width:0}
+  to{width:100%}
+}
+@keyframes blink{
+  50%{border-color:transparent}
+  100%{border-color:#000}
 }
 
 /* SOCIAL BUTTONS */
@@ -96,17 +109,6 @@ header h1{
   justify-content:center;
   min-height:60vh;
 }
-
-/* Typewriter animation for welcome to */
-.typewriter{
-  display:inline-block;
-  border-right: 2px solid #fff;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 2s steps(12), blink 0.6s step-end infinite;
-}
-@keyframes typing {from{width:0}to{width:100%}}
-@keyframes blink{50%{border-color:transparent}100%{border-color:#fff}}
 </style>
 </head>
 <body>
@@ -119,26 +121,22 @@ header h1{
 </div>
 
 <div class="center-container">
-  <h3><span class="typewriter">WELCOME TO</span></h3>
+  <h3>WELCOME TO</h3>
   <h1>Kurohane Ports</h1>
+  
   <div class="button-container">
-    <!-- Telegram Button -->
     <a href="https://t.me/kurohane" target="_blank" class="btn telegram">
       <svg viewBox="0 0 24 24">
         <path d="M9.86 16.5l-.38 5.36c.55 0 .79-.24 1.09-.53l2.62-2.47 5.42 3.95c1 .55 1.7.26 1.95-.92l3.54-16.63c.34-1.55-.55-2.18-1.52-1.8L2.43 9.36c-1.47.57-1.44 1.39-.25 1.77l4.97 1.55 11.53-7.26c.54-.33 1.03-.15.63.22L9.86 16.5z"/>
       </svg>
       Telegram
     </a>
-
-    <!-- GitHub Button -->
     <a href="https://github.com/kurohane" target="_blank" class="btn github">
       <svg viewBox="0 0 24 24">
         <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.44 7.87 10.98.58.11.79-.25.79-.56v-2.05c-3.2.7-3.87-1.53-3.87-1.53-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.74 1.26 3.42.96.11-.75.41-1.26.74-1.55-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.44-2.27 1.17-3.08-.12-.29-.51-1.46.11-3.05 0 0 .95-.3 3.12 1.17a10.84 10.84 0 012.84-.38c.96.01 1.93.13 2.84.38 2.17-1.47 3.12-1.17 3.12-1.17.62 1.59.23 2.76.11 3.05.73.81 1.17 1.83 1.17 3.08 0 4.41-2.68 5.37-5.23 5.66.42.36.79 1.08.79 2.18v3.23c0 .31.21.68.8.56A10.51 10.51 0 0023.5 12c0-6.35-5.15-11.5-11.5-11.5z"/>
       </svg>
       GitHub
     </a>
-
-    <!-- Twitter Button -->
     <a href="https://twitter.com/kurohane" target="_blank" class="btn twitter">
       <svg viewBox="0 0 24 24">
         <path d="M23.954 4.569c-.885.392-1.83.656-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.564-2.005.974-3.127 1.195-.897-.959-2.178-1.559-3.594-1.559-2.719 0-4.924 2.205-4.924 4.924 0 .39.045.765.127 1.124-4.092-.205-7.725-2.165-10.158-5.144-.424.728-.666 1.574-.666 2.475 0 1.708.87 3.216 2.188 4.099-.807-.026-1.566-.248-2.228-.616v.062c0 2.385 1.693 4.374 3.946 4.827-.413.112-.849.171-1.296.171-.317 0-.626-.03-.927-.086.627 1.956 2.444 3.377 4.6 3.416-1.68 1.317-3.809 2.101-6.115 2.101-.397 0-.788-.023-1.175-.069 2.179 1.397 4.768 2.212 7.557 2.212 9.054 0 14-7.496 14-13.986 0-.21 0-.423-.015-.634.962-.695 1.8-1.562 2.46-2.549z"/>
