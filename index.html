@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kurohane Ports</title>
+<!-- Roxy Font CDN -->
+<link href="https://fonts.cdnfonts.com/css/roxy" rel="stylesheet">
 <style>
 /* GLOBAL RESET */
 *{box-sizing:border-box;margin:0;padding:0}
@@ -15,11 +17,11 @@ body{
   overflow-x:hidden;
 }
 
-/* NAVIGATION */
+/* NAVIGATION (same location as Ports.html) */
 .nav{
   display:flex;
   gap:10px;
-  justify-content:flex-start;
+  justify-content:center;
   margin-top:10px;
 }
 .nav .pill{
@@ -38,37 +40,26 @@ body{
 header{
   margin-top:30px;
 }
-header h1{
-  font-size:48px;
-  font-weight:900;
-  background: linear-gradient(135deg,#8a2be2,#c266ff);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+header h3{
+  font-size:16px;
+  font-weight:700;
+  text-transform:uppercase;
   margin-bottom:6px;
-  text-align:left;
-}
-.typewriter{
-  display:inline-block;
-  border-right: 2px solid #fff;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 2s steps(12), blink 0.6s step-end infinite;
-}
-@keyframes typing {
-  from{width:0}
-  to{width:100%}
-}
-@keyframes blink{
-  50%{border-color:transparent}
-  100%{border-color:#fff}
-}
-
-/* SUBTITLE */
-.subtitle{
-  font-size:18px;
   color:#c266ff;
-  margin-bottom:22px;
   text-align:left;
+}
+header h1{
+  font-family:'Roxy', sans-serif;
+  font-size:32px;
+  font-weight:900;
+  background:#fff;
+  color:#1a1a40;
+  border-radius:12px;
+  padding:6px 12px;
+  display:inline-block;
+  text-align:left;
+  text-transform:uppercase;
+  margin-bottom:6px;
 }
 
 /* SOCIAL BUTTONS */
@@ -79,19 +70,24 @@ header h1{
   justify-content:flex-start;
 }
 .btn{
-  padding:14px 22px;
+  padding:12px 20px;
   border-radius:12px; /* Rounded square */
-  background: linear-gradient(135deg,#8a2be2,#c266ff);
   color:#fff;
   font-weight:700;
-  font-size:16px;
+  font-size:14px;
   text-decoration:none;
+  display:flex;
+  align-items:center;
+  gap:6px;
   transition:0.3s;
 }
-.btn:hover{
-  transform:scale(1.05);
-  box-shadow:0 8px 20px rgba(138,43,226,0.4);
-}
+.btn:hover{transform:scale(1.05);}
+.telegram{background:linear-gradient(135deg,#1DA1F2,#3db7ff);}
+.github{background:#111;}
+.twitter{background:#1DA1F2;}
+
+/* ICONS */
+.btn img{width:18px;height:18px;}
 
 /* CENTER CONTAINER */
 .center-container{
@@ -101,6 +97,17 @@ header h1{
   justify-content:center;
   min-height:60vh;
 }
+
+/* Typewriter animation for welcome to */
+.typewriter{
+  display:inline-block;
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(12), blink 0.6s step-end infinite;
+}
+@keyframes typing {from{width:0}to{width:100%}}
+@keyframes blink{50%{border-color:transparent}100%{border-color:#fff}}
 </style>
 </head>
 <body>
@@ -113,13 +120,18 @@ header h1{
 </div>
 
 <div class="center-container">
-  <h1><span class="typewriter">Welcome to</span></h1>
-  <h1><span class="typewriter" style="animation-delay:2.2s">Kurohane Ports</span></h1>
-  <div class="subtitle">We Are Loyal With HyperOS</div>
+  <h3><span class="typewriter">WELCOME TO</span></h3>
+  <h1>Kurohane Ports</h1>
   <div class="button-container">
-    <a href="https://t.me/kurohane" target="_blank" class="btn">Telegram</a>
-    <a href="https://github.com/kurohane" target="_blank" class="btn">GitHub</a>
-    <a href="https://twitter.com/kurohane" target="_blank" class="btn">Twitter</a>
+    <a href="https://t.me/kurohane" target="_blank" class="btn telegram">
+      <img src="icons/telegram.png" alt="Telegram"> Telegram
+    </a>
+    <a href="https://github.com/kurohane" target="_blank" class="btn github">
+      <img src="icons/github.png" alt="GitHub"> GitHub
+    </a>
+    <a href="https://twitter.com/kurohane" target="_blank" class="btn twitter">
+      <img src="icons/twitter.png" alt="Twitter"> Twitter
+    </a>
   </div>
 </div>
 
