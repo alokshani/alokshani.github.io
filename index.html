@@ -30,7 +30,6 @@ body{
   font-size:13px;
   font-weight:700;
   text-decoration:none;
-  transition:0.3s;
 }
 .nav .pill:hover{transform:scale(1.05);}
 
@@ -39,7 +38,7 @@ header{
   margin-top:30px;
 }
 header h3{
-  font-size:16px;
+  font-size:14px;
   font-weight:700;
   text-transform:uppercase;
   margin-bottom:6px;
@@ -61,25 +60,20 @@ header h1{
   overflow:hidden;
   white-space:nowrap;
   border-right:2px solid #000;
-  animation: typewriter 2s steps(16) forwards, blink 0.7s step-end infinite;
-  width:0;
+  animation: typewriter 2s steps(16) forwards;
 }
 
-/* Typewriter animation */
+/* Typewriter animation without blinking cursor at end */
 @keyframes typewriter{
   from{width:0}
   to{width:100%}
-}
-@keyframes blink{
-  50%{border-color:transparent}
-  100%{border-color:#000}
 }
 
 /* SOCIAL BUTTONS */
 .button-container{
   display:flex;
   gap:14px;
-  margin-top:40px; /* thoda neeche */
+  margin-top:40px;
   justify-content:center;
 }
 .btn{
