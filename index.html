@@ -13,6 +13,9 @@ body{
   color:#fff;
   padding:20px;
   overflow-x:hidden;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
 }
 
 /* NAVIGATION */
@@ -69,12 +72,24 @@ header h1{
   to{width:100%}
 }
 
+/* CENTER CONTAINER */
+.center-container{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:flex-start;
+  flex:1;
+  margin-top:40px;
+}
+
 /* SOCIAL BUTTONS */
 .button-container{
   display:flex;
   gap:14px;
-  margin-top:40px;
+  margin-top:auto; /* push buttons to bottom */
   justify-content:center;
+  width:100%;
+  padding-bottom:30px;
 }
 .btn{
   padding:12px 20px;
@@ -92,20 +107,9 @@ header h1{
 .telegram{background:#00aaff;}
 .github{background:#111;}
 .twitter{background:#1DA1F2;}
-
-/* IMAGE ICONS */
 .btn img{
   width:18px;
   height:18px;
-}
-
-/* CENTER CONTAINER */
-.center-container{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  justify-content:center;
-  min-height:60vh;
 }
 </style>
 </head>
