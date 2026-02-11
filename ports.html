@@ -102,21 +102,25 @@ header h1{
   text-align:center;
   margin-bottom:8px;
 }
-.subtitle{
-  font-size:13px;
-  color:#c4001d;
-  margin:6px 0 6px;
-  font-weight:700;
-  text-align:center;
-}
+
+/* PILLS */
 .pills{
   display:flex;
   gap:10px;
   flex-wrap:wrap;
-  margin-bottom:18px;
+  margin-bottom:12px;
+  justify-content:center;
 }
 .pill{
   background: linear-gradient(135deg,#c4001d,#ff4d6d);
+  color:#fff;
+  padding:8px 14px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:800;
+}
+.blue-pill{
+  background: linear-gradient(135deg,#6ac8ff,#33a1ff);
   color:#fff;
   padding:8px 14px;
   border-radius:999px;
@@ -128,6 +132,7 @@ header h1{
 .btn-container{
   display:flex;
   gap:10px;
+  margin-top:8px;
 }
 .btn{
   flex:1;
@@ -144,6 +149,12 @@ header h1{
 }
 .btn:hover{
   transform: scale(1.05);
+}
+.btn-pill-container{
+  display:flex;
+  gap:10px;
+  margin-bottom:6px;
+  justify-content:center;
 }
 </style>
 </head>
@@ -172,8 +183,12 @@ header h1{
       <img src="thumbnail1.png" alt="HyperOS 2.0.204.0 VOUMIXM">
     </div>
     <h2>| HyperOS 2.0.204.0 VOUMIXM |</h2>
-    <div class="subtitle">Codename: Ginkgo</div>
-    <div class="subtitle">Ported By: Mr Kurohane</div>
+    <div class="btn-pill-container">
+      <div class="blue-pill">Codename: Ginkgo</div>
+    </div>
+    <div class="btn-pill-container">
+      <div class="blue-pill">Ported By: Mr Kurohane</div>
+    </div>
     <div class="btn-container">
       <a href="download/rom.zip" class="btn">Download ROM</a>
       <a href="screenshots.html" class="btn">Screenshots</a>
@@ -186,8 +201,12 @@ header h1{
       <img src="thumbnail1.png" alt="HyperOS 2.0.3.0 UMSCNXM">
     </div>
     <h2>| HyperOS 2.0.3.0 UMSCNXM |</h2>
-    <div class="subtitle">Codename: Ginkgo</div>
-    <div class="subtitle">Ported By: Mr Kurohane</div>
+    <div class="btn-pill-container">
+      <div class="blue-pill">Codename: Ginkgo</div>
+    </div>
+    <div class="btn-pill-container">
+      <div class="blue-pill">Ported By: Mr Kurohane</div>
+    </div>
     <div class="btn-container">
       <a href="download/rom.zip" class="btn">Download ROM</a>
       <a href="screenshots.html" class="btn">Screenshots</a>
