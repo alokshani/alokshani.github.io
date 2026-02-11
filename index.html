@@ -9,9 +9,9 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
-  background: linear-gradient(to bottom, #99ccff 0%, #cce6ff 50%, #ffffff 100%);
-  color:#004080; /* dark blue text for contrast */
-  padding:20px;
+  background: linear-gradient(135deg,#cce7ff,#e6f2ff,#ffffff);
+  color:#111;
+  padding:14px;
   overflow-x:hidden;
   min-height:100vh;
 }
@@ -24,7 +24,7 @@ body{
   margin-top:10px;
 }
 .nav .pill{
-  background: linear-gradient(135deg,#3399ff,#66ccff);
+  background: linear-gradient(135deg,#007BFF,#33A1FF);
   color:#fff;
   padding:8px 14px;
   border-radius:999px;
@@ -39,27 +39,25 @@ body{
 .center-container{
   display:flex;
   flex-direction:column;
-  align-items:center; /* center horizontally */
+  align-items:center; /* horizontally center */
   justify-content:center;
   min-height:70vh;
   text-align:center;
 }
 
-/* Welcome To */
+/* WELCOME & TITLE */
 .center-container h3{
   font-size:14px;
   font-weight:700;
   text-transform:uppercase;
   margin-bottom:6px;
-  color:#3399ff;
+  color:#007BFF;
 }
-
-/* Kurohane Ports */
 .center-container h1{
   font-family:'Roxy', sans-serif;
   font-size:32px;
   font-weight:900;
-  background:#ffffff; /* only behind text */
+  background:#ffffff;
   color:#004080;
   border-radius:6px;
   padding:4px 12px;
@@ -71,8 +69,8 @@ body{
 /* SUBTITLE */
 .subtitle{
   font-size:16px;
-  color:#3399ff;
-  margin-bottom:20px;
+  color:#007BFF;
+  margin-bottom:22px;
 }
 
 /* SOCIAL BUTTONS */
@@ -84,8 +82,8 @@ body{
 }
 .btn{
   padding:12px 18px;
-  border-radius:12px;
-  background: linear-gradient(135deg,#3399ff,#66ccff);
+  border-radius:18px;
+  background: linear-gradient(135deg,#007BFF,#33A1FF);
   color:#fff;
   font-weight:700;
   font-size:14px;
@@ -97,7 +95,7 @@ body{
 }
 .btn:hover{
   transform:scale(1.05);
-  box-shadow:0 6px 18px rgba(51,153,255,0.4);
+  box-shadow:0 6px 18px rgba(0,123,255,0.4);
 }
 .btn img{
   width:18px;
@@ -118,6 +116,7 @@ body{
   <h3>Welcome To</h3>
   <h1>Kurohane Ports</h1>
   <div class="subtitle">We Are Loyal With HyperOS</div>
+
   <div class="button-container">
     <a href="https://t.me/kurohane" target="_blank" class="btn">
       <img src="images/telegram.png" alt="Telegram">Telegram
