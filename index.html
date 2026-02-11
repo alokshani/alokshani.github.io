@@ -40,7 +40,7 @@ body{
 .center-container{
   display:flex;
   flex-direction:column;
-  align-items:center; /* center horizontally for Kurohane Ports */
+  align-items:center;
   justify-content:flex-start;
   flex:1;
   margin-top:60px;
@@ -48,49 +48,32 @@ body{
 
 /* Welcome To */
 .center-container h3{
-  font-size:14px;
+  font-size:12px;
   font-weight:700;
   text-transform:uppercase;
   margin-bottom:6px;
   color:#c266ff;
-  align-self:flex-start; /* left aligned */
-  animation: fadeUp 1s ease forwards;
-  opacity:0;
-  transform: translateY(20px);
-  animation-delay:0.2s;
-  animation-fill-mode:forwards;
 }
 
 /* Kurohane Ports */
 .center-container h1{
   font-family:'Roxy', sans-serif;
-  font-size:36px;
+  font-size:28px; /* chhota size */
   font-weight:900;
-  background:#fff;
+  background:#fff; /* background only behind text */
   color:#000;
-  border-radius:8px;
-  padding:6px 12px;
+  border-radius:6px;
+  padding:2px 8px;
   display:inline-block;
   text-transform:uppercase;
-  overflow:hidden;
-  opacity:0;
-  transform:translateY(30px);
-  animation: fadeUp 1.5s ease forwards;
-  animation-delay:0.5s;
-}
-
-/* Fade from bottom animation */
-@keyframes fadeUp{
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+  text-align:center;
+  line-height:1; /* ek hi line me */
 }
 
 /* SOCIAL BUTTONS FIXED */
 .button-container{
   position:fixed;
-  bottom:20px;
+  bottom:30px; /* thoda upar */
   left:50%;
   transform:translateX(-50%);
   display:flex;
