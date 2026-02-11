@@ -111,9 +111,38 @@ body{
   transform: scale(1.1);
   box-shadow:0 8px 20px rgba(0,123,255,0.4);
 }
+  /* NAV PILL CONTAINER RELATIVE */
+.nav {
+  position: relative;
+}
+
+/* MOVING INDICATOR */
+.nav .indicator {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(135deg,#33A1FF,#007BFF); /* blue gradient */
+  transition: all 0.4s ease;
+  z-index: 0;
+}
+.nav .pill {
+  position: relative;
+  z-index: 1; /* above indicator */
+  transition: color 0.3s, transform 0.3s;
+}
+.nav .pill.active {
+  color: #fff;
+  }
 </style>
 </head>
 <body>
+  <div class="nav">
+  <div class="indicator"></div>  <!-- Ye add karna hai -->
+  <a href="index.html" class="pill">Home</a>
+  <a href="ports.html" class="pill">Ports</a>
+  <a href="#" class="pill">About</a>
+  </div>
 
 <!-- NAV -->
 <div class="nav">
