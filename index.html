@@ -11,17 +11,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-/* LOCK SCROLLING */
 body{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
-  background: linear-gradient(135deg,#ffe6ea,#fff1f3,#ffffff);
   margin:0;
   padding:0;
-  overflow:hidden; /* Scrolling lock */
-  display:flex;
-  flex-direction:column;
-  height:100vh;
-  width:100vw;
+  overflow:hidden; /* Lock scrolling */
+  background:#fff;
   color:#111;
 }
 
@@ -31,8 +26,8 @@ body{
   gap:8px;
   justify-content:center;
   padding:16px 0;
-  z-index:2;
   position:relative;
+  z-index:2;
 }
 .nav a{
   background: linear-gradient(135deg,#c4001d,#ff4d6d);
@@ -44,28 +39,29 @@ body{
   text-decoration:none;
   transition:0.3s;
 }
-.nav a:hover{
-  transform: scale(1.1);
-}
+.nav a:hover{ transform: scale(1.1); }
 
-/* SLIDESHOW BACKGROUND */
-.slideshow-container{
-  position:absolute;
-  top:0;
-  left:0;
+/* SLIDESHOW STRIP */
+.slideshow-strip{
+  position: relative;
   width:100%;
-  height:100%;
-  z-index:0;
+  height:150px; /* height of slideshow */
+  margin:0 auto;
   overflow:hidden;
-  filter:blur(25px); /* Heavy blur */
+  filter:blur(25px);
+  z-index:1;
 }
-.slideshow-container img{
-  position:absolute;
-  width:100%;
+.slideshow-strip .slides{
+  display:flex;
+  width:600%; /* 6 images */
+  height:100%;
+  transition: transform 1s ease-in-out;
+}
+.slideshow-strip .slides img{
+  width:16.6666%; /* 100/6 */
   height:100%;
   object-fit:cover;
-  opacity:0;
-  transition:opacity 1.5s ease-in-out;
+  flex-shrink:0;
 }
 
 /* CENTER CONTENT */
@@ -75,9 +71,8 @@ body{
   justify-content:center;
   align-items:center;
   text-align:center;
-  z-index:1;
   position:relative;
-  flex-grow:1;
+  z-index:2;
   padding:20px;
 }
 
@@ -90,7 +85,7 @@ body{
   animation: fadeIn 1s forwards 0.5s;
 }
 
-/* Big text Kurohane with typewriter */
+/* Big text Kurohane */
 .big-text{
   font-family: 'Righteous', cursive;
   font-size:64px;
@@ -107,7 +102,7 @@ body{
   margin-bottom:0;
 }
 
-/* Ports text below Kurohane */
+/* Ports text */
 .ports-text{
   font-family: 'Righteous', cursive;
   font-size:48px;
@@ -128,17 +123,9 @@ body{
 }
 
 /* Typewriter animation */
-@keyframes typing{
-  from { width: 0; }
-  to { width: 100%; }
-}
-@keyframes blink{
-  0%, 100% { border-color: transparent; }
-  50% { border-color: #c4001d; }
-}
-@keyframes fadeIn{
-  to { opacity:1; }
-}
+@keyframes typing{ from { width: 0; } to { width: 100%; } }
+@keyframes blink{ 0%,100%{border-color:transparent;}50%{border-color:#c4001d;} }
+@keyframes fadeIn{ to {opacity:1;} }
 
 /* SOCIAL BUTTONS */
 .social-buttons{
@@ -159,18 +146,10 @@ body{
   text-decoration:none;
   transition:0.3s;
 }
-.social-buttons a.telegram{
-  background: linear-gradient(135deg, #2ebcff, #0d8ddb);
-}
-.social-buttons a.github{
-  background:#000;
-}
-.social-buttons a.twitter{
-  background:#1da1f2;
-}
-.social-buttons a:hover{
-  transform: scale(1.2);
-}
+.social-buttons a.telegram{ background: linear-gradient(135deg, #2ebcff, #0d8ddb); }
+.social-buttons a.github{ background:#000; }
+.social-buttons a.twitter{ background:#1da1f2; }
+.social-buttons a:hover{ transform: scale(1.2); }
 
 </style>
 </head>
@@ -183,14 +162,16 @@ body{
   <a href="#">About</a>
 </div>
 
-<!-- SLIDESHOW BACKGROUND -->
-<div class="slideshow-container">
-  <img src="photo1.png" class="slide" style="opacity:1;">
-  <img src="photo2.png" class="slide">
-  <img src="photo3.png" class="slide">
-  <img src="photo4.png" class="slide">
-  <img src="photo5.png" class="slide">
-  <img src="photo6.png" class="slide">
+<!-- SLIDESHOW STRIP (Behind Welcome To) -->
+<div class="slideshow-strip">
+  <div class="slides">
+    <img src="photo1.png">
+    <img src="photo2.png">
+    <img src="photo3.png">
+    <img src="photo4.png">
+    <img src="photo5.png">
+    <img src="photo6.png">
+  </div>
 </div>
 
 <!-- CENTER CONTENT -->
@@ -209,14 +190,15 @@ body{
 </div>
 
 <script>
-// SIMPLE SLIDESHOW
-let slides = document.querySelectorAll('.slide');
-let currentSlide = 0;
-setInterval(() => {
-  slides[currentSlide].style.opacity = 0;
-  currentSlide = (currentSlide+1)%slides.length;
-  slides[currentSlide].style.opacity = 1;
-}, 3000); // change every 3s
+// HORIZONTAL SLIDESHOW SCRIPT
+const slidesContainer = document.querySelector('.slides');
+const totalSlides = slidesContainer.children.length;
+let currentIndex = 0;
+
+setInterval(()=>{
+  currentIndex = (currentIndex+1)%totalSlides;
+  slidesContainer.style.transform = `translateX(-${(100/totalSlides)*currentIndex}%)`;
+},3000);
 </script>
 
 </body>
