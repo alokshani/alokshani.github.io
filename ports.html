@@ -30,7 +30,7 @@ body{
 }
 header{
   text-align:center;
-  margin:22px 0 26px;
+  margin:22px 0 14px; /* subtitle closer */
 }
 header h1{
   font-size:36px;
@@ -38,7 +38,7 @@ header h1{
   background: linear-gradient(135deg,#c4001d,#ff4d6d);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  margin-bottom:14px;
+  margin-bottom:6px; /* subtitle just below header */
 }
 .search-label{
   display:block;
@@ -103,12 +103,12 @@ header h1{
   margin-bottom:12px;
 }
 
-/* PILLS */
+/* PILLS ABOVE BUTTONS LEFT ALIGNED */
 .btn-pill-container{
   display:flex;
-  justify-content:center;
   gap:2px; /* minimal gap */
   margin-bottom:12px;
+  justify-content:flex-start; /* left aligned */
 }
 .blue-pill{
   background: linear-gradient(135deg,#6ac8ff,#33a1ff);
