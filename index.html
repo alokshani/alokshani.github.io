@@ -139,6 +139,22 @@ body{
     </a>
   </div>
 </div>
+<script>
+// Highlight active nav pill
+const navPills = document.querySelectorAll('.nav .pill');
 
+function setActivePill() {
+  const path = window.location.pathname.split("/").pop();
+  navPills.forEach(pill => {
+    if(pill.getAttribute('href') === path || (path === '' && pill.getAttribute('href') === 'index.html')){
+      pill.classList.add('active');
+    } else {
+      pill.classList.remove('active');
+    }
+  });
+}
+
+window.addEventListener('load', setActivePill);
+</script>
 </body>
 </html>
