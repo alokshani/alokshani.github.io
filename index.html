@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kurohane Ports</title>
+
 <style>
 /* GLOBAL RESET */
 *{box-sizing:border-box;margin:0;padding:0}
@@ -13,7 +14,7 @@ body{
   color:#111;
   padding:14px;
   overflow-x:hidden;
-  min-height:100vh;
+  overflow-y:hidden; /* scrolling lock */
 }
 
 /* NAVIGATION */
@@ -32,43 +33,37 @@ body{
   font-weight:700;
   text-decoration:none;
   transition:0.3s;
+  position:relative;
+}
+.nav .pill.active{
+  box-shadow:0 0 8px rgba(0,123,255,0.6);
 }
 .nav .pill:hover{transform:scale(1.05);}
 
-/* CENTER CONTAINER */
-.center-container{
-  display:flex;
-  flex-direction:column;
-  align-items:center; /* horizontally center */
-  justify-content:center;
-  min-height:70vh;
-  text-align:center;
+/* HEADER */
+header{
+  text-align:left;
+  margin-top:30px;
 }
-
-/* WELCOME & TITLE */
-.center-container h3{
-  font-size:14px;
-  font-weight:700;
-  text-transform:uppercase;
-  margin-bottom:6px;
+header h2{
+  font-size:22px;
+  font-weight:500;
   color:#007BFF;
+  margin-bottom:6px;
+  text-transform:capitalize;
 }
-.center-container h1{
-  font-family:'Roxy', sans-serif;
-  font-size:32px;
+header h1{
+  font-family: 'Roxy', sans-serif; /* Roxy font */
+  font-size:72px;
   font-weight:900;
-  background:#ffffff;
-  color:#004080;
-  border-radius:6px;
-  padding:4px 12px;
-  display:inline-block;
-  text-transform:uppercase;
+  color:#000; /* black text */
   margin-bottom:12px;
+  line-height:1.1;
 }
 
 /* SUBTITLE */
 .subtitle{
-  font-size:16px;
+  font-size:18px;
   color:#007BFF;
   margin-bottom:22px;
 }
@@ -76,141 +71,85 @@ body{
 /* SOCIAL BUTTONS */
 .button-container{
   display:flex;
-  gap:12px;
+  gap:14px;
   margin-top:20px;
-  justify-content:center;
+  justify-content:flex-start;
 }
 .btn{
-  padding:12px 18px;
-  border-radius:18px;
-  background: linear-gradient(135deg,#007BFF,#33A1FF);
-  color:#fff;
-  font-weight:700;
-  font-size:14px;
-  text-decoration:none;
   display:flex;
   align-items:center;
   gap:6px;
+  padding:14px 22px;
+  border-radius:12px;
+  font-weight:700;
+  font-size:16px;
+  text-decoration:none;
   transition:0.3s;
-}
-.btn:hover{
-  transform:scale(1.05);
-  box-shadow:0 6px 18px rgba(0,123,255,0.4);
+  color:#fff;
 }
 .btn img{
-  width:18px;
-  height:18px;
-} 
-  /* ACTIVE PILL ANIMATION */
-.nav .pill{
-  transition:0.4s all;
-  position: relative;
-}
-.nav .pill.active{
-  background: linear-gradient(135deg,#33A1FF,#007BFF);
-  transform: scale(1.1);
-  box-shadow:0 8px 20px rgba(0,123,255,0.4);
-}
-  /* NAV PILL CONTAINER RELATIVE */
-.nav {
-  position: relative;
+  width:20px;
+  height:20px;
 }
 
-/* MOVING INDICATOR */
-.nav .indicator {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  border-radius: 999px;
-  background: linear-gradient(135deg,#33A1FF,#007BFF); /* blue gradient */
-  transition: all 0.4s ease;
-  z-index: 0;
+/* SOCIAL COLORS */
+.btn.telegram{background:linear-gradient(135deg,#33C7FF,#00A2FF);}
+.btn.github{background:#111;}
+.btn.twitter{background:#1DA1F2;}
+
+.btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 8px 20px rgba(0,123,255,.4);
 }
-.nav .pill {
-  position: relative;
-  z-index: 1; /* above indicator */
-  transition: color 0.3s, transform 0.3s;
+
+/* CENTER CONTAINER */
+.center-container{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+  min-height:80vh;
 }
-.nav .pill.active {
-  color: #fff;
-  }
 </style>
 </head>
+
 <body>
-  <div class="nav">
-  <div class="indicator"></div>  <!-- Ye add karna hai -->
-  <a href="index.html" class="pill">Home</a>
-  <a href="ports.html" class="pill">Ports</a>
-  <a href="#" class="pill">About</a>
-  </div>
 
 <!-- NAV -->
 <div class="nav">
-  <a href="index.html" class="pill">Home</a>
+  <a href="index.html" class="pill active">Home</a>
   <a href="ports.html" class="pill">Ports</a>
   <a href="#" class="pill">About</a>
 </div>
 
 <div class="center-container">
-  <h3>Welcome To</h3>
+  <h2>Welcome to</h2>
   <h1>Kurohane Ports</h1>
   <div class="subtitle">We Are Loyal With HyperOS</div>
 
   <div class="button-container">
-    <a href="https://t.me/kurohane" target="_blank" class="btn">
-      <img src="images/telegram.png" alt="Telegram">Telegram
+    <a href="https://t.me/kurohane" target="_blank" class="btn telegram">
+      <img src="telegram.png" alt="Telegram Logo"> Telegram
     </a>
-    <a href="https://github.com/kurohane" target="_blank" class="btn">
-      <img src="images/github.png" alt="GitHub">GitHub
+    <a href="https://github.com/kurohane" target="_blank" class="btn github">
+      <img src="github.png" alt="GitHub Logo"> GitHub
     </a>
-    <a href="https://twitter.com/kurohane" target="_blank" class="btn">
-      <img src="images/twitter.png" alt="Twitter">Twitter
+    <a href="https://twitter.com/kurohane" target="_blank" class="btn twitter">
+      <img src="twitter.png" alt="Twitter Logo"> Twitter
     </a>
   </div>
 </div>
+
 <script>
-// Highlight active nav pill
+// NAV ACTIVE PILL
 const navPills = document.querySelectorAll('.nav .pill');
-
-function setActivePill() {
-  const path = window.location.pathname.split("/").pop();
-  navPills.forEach(pill => {
-    if(pill.getAttribute('href') === path || (path === '' && pill.getAttribute('href') === 'index.html')){
-      pill.classList.add('active');
-    } else {
-      pill.classList.remove('active');
-    }
+navPills.forEach(p => {
+  p.addEventListener('click', ()=>{
+    navPills.forEach(x=>x.classList.remove('active'));
+    p.classList.add('active');
   });
-}
-
-window.addEventListener('load', setActivePill);
+});
 </script>
-<script>
-const navPills = document.querySelectorAll('.nav .pill');
-const indicator = document.querySelector('.nav .indicator');
 
-function moveIndicator() {
-  const path = window.location.pathname.split("/").pop();
-  let activePill = navPills[0]; // default Home
-  navPills.forEach(pill => {
-    if(pill.getAttribute('href') === path || (path === '' && pill.getAttribute('href') === 'index.html')){
-      activePill = pill;
-    }
-  });
-
-  // Set active class
-  navPills.forEach(p => p.classList.remove('active'));
-  activePill.classList.add('active');
-
-  // Move indicator
-  const pillRect = activePill.getBoundingClientRect();
-  const navRect = activePill.parentElement.getBoundingClientRect();
-  indicator.style.width = pillRect.width + 'px';
-  indicator.style.left = (pillRect.left - navRect.left) + 'px';
-}
-
-window.addEventListener('load', moveIndicator);
-window.addEventListener('resize', moveIndicator);
-</script>
 </body>
 </html>
