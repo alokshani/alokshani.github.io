@@ -1,0 +1,33 @@
+{
+    "device_name": "Redmi Note 10 Pro",
+    "codename": "sweet",
+    "port_rom_name": "HyperOS China Stable Port",
+    "port_rom_version": "1.0.12.0.UKNCNXM",
+    "android_version": "14",
+    "porter_name": "ChinaMod",
+    "porter_contact": "@ChinaMod_Channel",
+    "tags": [
+        "All Ports",
+        "HyperOS 1.0",
+        "China Port"
+    ],
+    "date_of_upload": "2026-02-10",
+    "download_links": [
+        {
+            "label": "Mega",
+            "url": "https://mega.nz/file/example_sweet"
+        }
+    ],
+    "brief_note": "Stable port of the China ROM for Global users. Includes Debloater and localized features.",
+    "changelog": [
+        "Removed China-specific bloat",
+        "Added Google Apps",
+        "Optimized for Global network bands"
+    ],
+    "installation_instructions": [
+        "Wipe everything except Internal Storage",
+        "Flash ROM",
+        "Format Data (yes)",
+        "Reboot"
+    ]
+}

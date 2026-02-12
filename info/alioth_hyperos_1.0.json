@@ -1,0 +1,38 @@
+{
+    "device_name": "POCO F3",
+    "codename": "alioth",
+    "port_rom_name": "HyperOS 1.0.5.0 Port",
+    "port_rom_version": "1.0.5.0.UMBMIXM",
+    "android_version": "14",
+    "porter_name": "KuroHane",
+    "porter_contact": "@KuroHane_Ports",
+    "tags": [
+        "All Ports",
+        "HyperOS 1.0",
+        "Global Port"
+    ],
+    "date_of_upload": "2026-02-12",
+    "download_links": [
+        {
+            "label": "SourceForge",
+            "url": "https://sourceforge.net/projects/kurohaneports/files/alioth/HyperOS_1.0.5.0_alioth.zip"
+        },
+        {
+            "label": "Telegram",
+            "url": "https://t.me/KuroHaneUpdates/123"
+        }
+    ],
+    "brief_note": "A highly optimized port of HyperOS for the POCO F3 with all Global features enabled.",
+    "changelog": [
+        "Updated to February 2026 security patch",
+        "Fixed NFC issues",
+        "Improved system stability",
+        "Added Leica Camera by default"
+    ],
+    "installation_instructions": [
+        "Wipe Data/Metadata",
+        "Flash ROM zip",
+        "Flash Magisk (Optional)",
+        "Reboot to System"
+    ]
+}

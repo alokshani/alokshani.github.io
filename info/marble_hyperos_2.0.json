@@ -1,0 +1,32 @@
+{
+    "device_name": "Redmi Note 12 Turbo",
+    "codename": "marble",
+    "port_rom_name": "HyperOS 2.0 Beta Port",
+    "port_rom_version": "2.0.24.2.12.DEV",
+    "android_version": "15",
+    "porter_name": "PortMaster",
+    "porter_contact": "@PortMaster_Dev",
+    "tags": [
+        "All Ports",
+        "HyperOS 2.0",
+        "China Port"
+    ],
+    "date_of_upload": "2026-02-12",
+    "download_links": [
+        {
+            "label": "Drive",
+            "url": "https://drive.google.com/open?id=example_marble"
+        }
+    ],
+    "brief_note": "Early experimental port of HyperOS 2.0 based on Android 15. Expect some bugs.",
+    "changelog": [
+        "Initial HyperOS 2.0 Port",
+        "Interconnectivity features enabled",
+        "New HyperOS 2.0 animations"
+    ],
+    "installation_instructions": [
+        "Clean flash mandatory",
+        "Format data required",
+        "Reboot to recovery, flash zip"
+    ]
+}
