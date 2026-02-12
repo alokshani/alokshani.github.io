@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kurohane Ports - Ports</title>
+<title>Kurohane Ports</title>
+
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
+
 body{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
   background: linear-gradient(135deg,#fff8e1,#fff3cd,#ffffff);
@@ -13,6 +15,7 @@ body{
   padding:14px;
   overflow-x:hidden;
 }
+
 /* NAV */
 .nav{
   display:flex;
@@ -23,22 +26,46 @@ body{
 .nav .pill{
   background: linear-gradient(135deg,#FFD700,#FFC107);
   color:#111;
-  padding:8px 14px;
+  padding:8px 16px;
   border-radius:999px;
   font-size:13px;
   font-weight:700;
   text-decoration:none;
   transition:0.3s;
 }
-.nav .pill:hover{transform:scale(1.05);}
+.nav .pill:hover{
+  transform:scale(1.05);
+}
+
+/* PAGE TITLE SECTION */
+.page-header{
+  text-align:center;
+  margin-top:30px;
+  margin-bottom:30px;
+}
+
+.page-header h1{
+  font-size:34px;
+  font-weight:900;
+  background: linear-gradient(135deg,#FFD700,#FFC107);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.page-header p{
+  margin-top:10px;
+  font-size:15px;
+  font-weight:600;
+  opacity:0.8;
+}
 
 /* CONTAINER */
 .container{
   display:grid;
   grid-template-columns:1fr;
   gap:22px;
-  margin-top:26px;
 }
+
 /* CARD */
 .card{
   background: rgba(255,223,0,0.25);
@@ -48,20 +75,21 @@ body{
   box-shadow:0 10px 25px rgba(255,193,7,.2);
   transition:0.3s;
 }
+
 .card:hover{
   transform:translateY(-5px);
   box-shadow:0 15px 35px rgba(255,193,7,.3);
 }
+
 .card img{
   width:100%;
   height:200px;
   object-fit:cover;
   border-radius:18px;
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
   margin-bottom:16px;
   box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
 }
+
 /* PILLS */
 .pills{
   display:flex;
@@ -69,6 +97,7 @@ body{
   flex-wrap:wrap;
   margin-bottom:8px;
 }
+
 .pill{
   padding:6px 12px;
   border-radius:999px;
@@ -77,19 +106,20 @@ body{
   color:#111;
   background: linear-gradient(135deg,#FFD700,#FFC107);
 }
+
 .yellow-pill{
-  background: linear-gradient(135deg, #b6f2a1, #7ee07c); /* light green gradient */
+  background: linear-gradient(135deg,#b6f2a1,#7ee07c);
   color:#111;
-  box-shadow: inset 0 2px 2px rgba(255,255,255,0.5); /* subtle glossy effect */
 }
+
 /* TITLE */
 .card h2{
   font-size:20px;
   font-weight:800;
   margin-bottom:12px;
   margin-top:4px;
-  color:#111;
 }
+
 /* BUTTONS */
 .btn-container{
   display:flex;
@@ -98,6 +128,7 @@ body{
   flex-wrap:wrap;
   margin-top:12px;
 }
+
 .btn{
   flex:1;
   text-align:center;
@@ -111,64 +142,56 @@ body{
   box-shadow:0 8px 20px rgba(255,193,7,.3);
   transition:0.3s;
 }
+
 .btn:hover{
   transform:scale(1.05);
   box-shadow:0 12px 30px rgba(255,193,7,.5);
 }
+
 </style>
 </head>
+
 <body>
 
+<!-- NAV -->
 <div class="nav">
   <a href="index.html" class="pill">Home</a>
   <a href="ports.html" class="pill">Ports</a>
   <a href="#" class="pill">About</a>
 </div>
 
+<!-- PAGE TITLE -->
+<div class="page-header">
+  <h1>Kurohane Ports</h1>
+  <p>Will Come Soon For Moonstone Too</p>
+</div>
+
+<!-- CARDS -->
 <div class="container">
 
   <!-- CARD 1 -->
   <div class="card">
     <img src="overview1.png" alt="ROM Thumbnail">
-  <!-- Title Below Upper Pills -->
+
     <h2>| HyperOS 2.0.204.0 VOUMIXM |</h2>
-    <!-- Upper Pills -->
+
     <div class="pills">
       <div class="pill">Codename: Ginkgo</div>
       <div class="pill yellow-pill">By Mr Kurohane</div>
     </div>
-    <!-- Lower Pills -->
+
     <div class="pills">
       <div class="pill">Android 15</div>
       <div class="pill">AOSP Vendor</div>
     </div>
+
     <div class="btn-container">
       <a href="download/rom1.zip" class="btn">Download ROM</a>
       <a href="screenshots.html" class="btn">Screenshots</a>
     </div>
   </div>
 
-  <!-- CARD 2 -->
-  <div class="card">
-    <img src="overview1.png" alt="ROM Thumbnail">
-    <!-- Title Below Upper Pills -->
-    <h2>| HyperOS 2.0.3.0 UMSCNXM |</h2>
-    <!-- Upper Pills -->
-    <div class="pills">
-      <div class="pill">Codename: Ginkgo</div>
-      <div class="pill yellow-pill">By Mr Kurohane</div>
-    </div>
-    <!-- Lower Pills -->
-    <div class="pills">
-      <div class="pill">Android 14</div>
-      <div class="pill">Mint Vendor</div>
-    </div>
-    <div class="btn-container">
-      <a href="download/rom2.zip" class="btn">Download ROM</a>
-      <a href="screenshots.html" class="btn">Screenshots</a>
-    </div>
-  </div>
-
 </div>
+
 </body>
-</html>
+  </html>
